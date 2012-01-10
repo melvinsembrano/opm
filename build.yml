@@ -1,0 +1,33 @@
+#sdk: "/Users/melvin/.rvm/gems/ruby-1.8.7-p352@mobile/gems/rhodes-3.3.1"
+sdkversion: 3.3.0
+name: opm
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+applog: rholog.txt
+capabilities: 
+- gps
+- pim
+- camera
+- vibrate
+- phone
+- bluetooth
+- calendar
+
+iphone:
+  configuration: release
+  sdk: iphonesimulator5.0
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.opm
+  BundleURLScheme: opm
+wp:
+  productid: 'cf5a3680-1ccc-012f-9108-482a14475237'
+symbian:
+  uid: '0xe943c6a4'
+android:
+  version: 2.3.3
+
+extensions: ["json", "another-extension"]

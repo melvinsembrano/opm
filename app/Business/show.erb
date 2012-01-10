@@ -1,0 +1,44 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @business.name %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @business.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Name</div>
+            <div class="itemValue"><%= @business.name %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Description</div>
+            <div class="itemValue"><%= @business.description %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Lat</div>
+            <div class="itemValue"><%= @business.lat %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Lng</div>
+            <div class="itemValue"><%= @business.lng %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Url</div>
+            <div class="itemValue"><%= @business.url %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

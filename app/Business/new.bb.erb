@@ -1,0 +1,43 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New Business</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @business.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Name: </td>
+                <td class="itemValue"><input type="text" name="business[name]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Description: </td>
+                <td class="itemValue"><input type="text" name="business[description]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Lat: </td>
+                <td class="itemValue"><input type="text" name="business[lat]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Lng: </td>
+                <td class="itemValue"><input type="text" name="business[lng]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Url: </td>
+                <td class="itemValue"><input type="text" name="business[url]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>
