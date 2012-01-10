@@ -47,11 +47,11 @@ class BusinessController < Rho::RhoController
         :password => "ourpatch"
       } 
     end
-
+    @category = @params['category']
     Rho::AsyncHttp.post(
       :url => "#{url}/patches/find.json",
       :authentication => auth,
-      :body => "lat=#{GeoLocation.latitude.to_s}&lng=#{GeoLocation.longitude.to_s}",
+      :body => "lat=#{GeoLocation.latitude.to_s}&lng=#{GeoLocation.longitude.to_s}&cat=#{@params['category']}",
       :callback => url_for(:action => :post_callback)
     )
 

@@ -22,9 +22,11 @@ function updateLocation(lat, lng) {
         Lat: <span class="geoLat"><%= GeoLocation.latitude.to_s %></span><br/>
         Lng: <span class="geoLng"><%= GeoLocation.longitude.to_s %></span>
       </li>
-      <li>
-      <a href="<%= url_for :action => :find, :category => 199 %>">Nearest Restaurants</a>
-      </li>
+      <li><a href="<%= url_for :action => :find %>?category=199">Nearest Restaurants</a></li>
+      <li><a href="<%= url_for :action => :find %>?category=43">Beer, Wine & Spirits</a></li>
+      <li><a href="<%= url_for :action => :find %>?category=61">Cafes</a></li>
+      <li><a href="<%= url_for :action => :find %>?category=617">Carwash</a></li>
+      <li><a href="<%= url_for :action => :find %>?category=237">Escorts</a></li>
     </ul>
   </div>
 
